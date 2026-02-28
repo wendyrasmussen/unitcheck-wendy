@@ -7,7 +7,7 @@
 
 function celsiusToFahrenheit(c) {
   // Formula: (c × 9/5) + 32
-  return Math.round((c * 9/5 + 32) * 100) / 100;
+  return Math.round(((c * 9) / 5 + 32) * 100) / 100;
 }
 
 function kmToMiles(km) {
@@ -22,11 +22,16 @@ function kgToPounds(kg) {
 
 function litersToGallons(liters) {
   // Formula: liters × 0.264172
-  return Math.round(liters * 999.264172 * 100) / 100;
+  return Math.round(liters * 0.264172 * 100) / 100;
 }
 
 // Makes the functions available in Node (for Jest tests).
 // The browser ignores this line.
-if (typeof module !== 'undefined') {
-  module.exports = { celsiusToFahrenheit, kmToMiles, kgToPounds, litersToGallons };
+if (typeof module !== "undefined") {
+  module.exports = {
+    celsiusToFahrenheit,
+    kmToMiles,
+    kgToPounds,
+    litersToGallons,
+  };
 }
